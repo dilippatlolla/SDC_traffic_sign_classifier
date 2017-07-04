@@ -147,7 +147,7 @@ The first is the Lenet. the second id the LeCun/Samernet architecture. The third
 
 * Which parameters were tuned? How were they adjusted and why?
 The parameters which I tuned included the learning-rate, the batch size, the number of epochs, and the network topology itself.
-That's quite a lot of tuning and I feel that I've got a long way to go before I understand the interactions between these hyper-parameters. One of the first things I tried, was adding the pre-processing step which added approximately 2% of accuracy improvement. Adding normalization to the preprocessing did wonders to the Loss behavior.
+I definitely feel that I've got a long way to go before I understand the interactions between these hyper-parameters and their impact. One of the first things I tried, was adding the pre-processing step which added approximately 3% of accuracy improvement. Adding normalization to the preprocessing improved. Also enhancing the contrast of the train dataset improved the accuracy by another 3%
 
 Also trued dropout. I have applied the dropout to the fully connected layer. I would like to give a try in applying the dropout to the convolutional layers to see how it impacts
 
