@@ -24,6 +24,12 @@ The goals / steps of this project are the following:
 [image3]: ./other_images/lecun_arch.png "samernet/LeCun architecture"
 [image4]: ./other_images/hist_plot.png "hist plot"
 
+[image5]: ./web_traffic_signs/random_11.png "hist plot"
+[image6]: ./web_traffic_signs/random_12.png "hist plot"
+[image7]: ./web_traffic_signs/random_18.png "hist plot"
+[image8]: ./web_traffic_signs/random_33.png "hist plot"
+[image9]: ./web_traffic_signs/random_34.png "hist plot"
+
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
@@ -115,7 +121,7 @@ Here is an overview of the architecture from the Samernet/LeCun paper
 To train the model, I used an Adam optimizer (already implemented in the LeNet lab). The final settings used were:
 
     batch size: 128
-    epochs: 60
+    epochs: 40
     learning rate: 0.0009
     mu: 0
     sigma: 0.1
@@ -133,7 +139,7 @@ If an iterative approach was chosen:
 I have used Lenet architecture to begin with as it can be easily adapted as it takes the input as 32x32 image same as the input train data.
 
 * What were some problems with the initial architecture?
-The accuracy stagnated at 90%
+The accuracy stagnated at 90%. the initial filters count was low.
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
 I tried basically three different architectures.
@@ -159,10 +165,10 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6]
-![alt text][image7] ![alt text][image8]
+![alt text][image5] ![alt text][image6] ![alt text][image7]
+![alt text][image8] ![alt text][image9]
 
-The first image might be difficult to classify because ...
+The first image might be difficult to classify because it is a bit warped. But since we have included an augmented dataset in the train dataset, the netwoek classified it fine.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -170,14 +176,14 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-| Stop Sign      		| Stop sign   									|
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Right-of-way      		| Right-of-way  									|
+| Priority road     			| Priority road 										|
+| General caution					| General caution											|
+| Turn right ahead	      		| Turn right ahead					 				|
+| Turn left ahead			| Turn left ahead      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%.
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -187,12 +193,11 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-| .60         			| Stop sign   									|
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
+| 1         			|  Right-of-way   									|
+| .999     				| Priority road  										|
+| .999					| General caution											|
+| .999	      			| Turn right ahead					 				|
+| .999				    |  Turn left ahead      							|
 
 For the second image ...
 
