@@ -18,15 +18,11 @@ The goals / steps of this project are the following:
 
 
 [//]: # (Image References)
-
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image0]: ./other_images/train_init.png "train data"
+[image1]: ./other_images/train_data.png "train data"
+[image2]: ./other_images/aug_data.png "augmented data"
+[image3]: ./other_images/lecun_arch.png "samernet/LeCun architecture"
+[image4]: ./other_images/hist_plot.png "hist plot"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -52,12 +48,6 @@ I used the numpy to calculate summary statistics of the traffic signs data set:
 * The number of unique classes/labels in the data set is 43
 
 ####2. Include an exploratory visualization of the dataset.
-[image0]: ./other_images/train_init.png "train data"
-[image1]: ./other_images/train_data.png "train data"
-[image2]: ./other_images/aug_data.png "augmented data"
-[image3]: ./other_images/lecun_arch.png "samernet/LeCun architecture"
-[image4]: ./other_images/hist_plot.png "hist plot"
-
 Here is an exploratory visualization of the train data set.
 ![alt text][image0]
 
