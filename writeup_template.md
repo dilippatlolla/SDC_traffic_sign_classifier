@@ -130,9 +130,9 @@ To train the model, I used an Adam optimizer (already implemented in the LeNet l
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of 95.6
-* validation set accuracy of
-* test set accuracy of
+* training set accuracy of 99.6%
+* validation set accuracy of 98%
+* test set accuracy of 96%
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
@@ -148,6 +148,8 @@ The first is the Lenet. the second id the LeCun/Samernet architecture. The third
 * Which parameters were tuned? How were they adjusted and why?
 The parameters which I tuned included the learning-rate, the batch size, the number of epochs, and the network topology itself.
 That's quite a lot of tuning and I feel that I've got a long way to go before I understand the interactions between these hyper-parameters. One of the first things I tried, was adding the pre-processing step which added approximately 2% of accuracy improvement. Adding normalization to the preprocessing did wonders to the Loss behavior.
+
+Also trued dropout. I have applied the dropout to the fully connected layer. I would like to give a try in applying the dropout to the convolutional layers to see how it impacts
 
 Other improvements included trying different preprocessing techniques and also other augmentations to improve dataset as well as balance the train data can be used. Due to time constraints I have not included them in this. I consider this as work still in progress and will keep working on updating and improve the accuracy.
 
