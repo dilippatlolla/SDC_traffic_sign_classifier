@@ -149,7 +149,7 @@ The first is the Lenet. the second id the LeCun/Samernet architecture. The third
 The parameters which I tuned included the learning-rate, the batch size, the number of epochs, and the network topology itself.
 I definitely feel that I've got a long way to go before I understand the interactions between these hyper-parameters and their impact. One of the first things I tried, was adding the pre-processing step which added approximately 3% of accuracy improvement. Adding normalization to the preprocessing improved. Also enhancing the contrast of the train dataset improved the accuracy by another 3%
 
-Also trued dropout. I have applied the dropout to the fully connected layer. I would like to give a try in applying the dropout to the convolutional layers to see how it impacts
+Also tried dropout. I have applied the dropout to the fully connected layer. I would like to give a try in applying the dropout to the convolutional layers to see how it impacts
 
 Other improvements included trying different preprocessing techniques and also other augmentations to improve dataset as well as balance the train data can be used. Due to time constraints I have not included them in this. I consider this as work still in progress and will keep working on updating and improve the accuracy.
 
@@ -184,8 +184,13 @@ Here are the results of the prediction:
 | Turn right ahead	      		| Turn right ahead					 				|
 | Turn left ahead			| Turn left ahead      							|
 
-
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%.
+
+Though the accuracy on the captured images is 100%. It would be tough to conclude the model fit, the results predict a balanced model. The accuracy on train data is 99.6%, while the accuracy on test data falls to 96%. This can be because the model is memorizing the data it has seen and is unable to generalize to unseen examples. With these numbers it can be assumed that the model is very slightly overfitting.
+
+* training set accuracy of 99.6%
+* validation set accuracy of 98%
+* test set accuracy of 96%
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
