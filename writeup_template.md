@@ -186,7 +186,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%.
 
-Though the accuracy on the captured images is 100%. It would be tough to conclude the model fit, the results predict a balanced model. The accuracy on train data is 99.6%, while the accuracy on test data falls to 96%. This can be because the model is memorizing the data it has seen and is unable to generalize to unseen examples. With these numbers it can be assumed that the model is very slightly overfitting.
+Though the accuracy on the captured images is 100%. It would be tough to conclude the model fit based on its performance on the very few web images, though the results predict a balanced model. The accuracy on train data is 99.6%, while the accuracy on test data falls to 96%. This can be because the model is memorizing the data it has seen and is unable to generalize to unseen examples. With these numbers it can be assumed that the model is very slightly overfitting.
 
 * training set accuracy of 99.6%
 * validation set accuracy of 98%
